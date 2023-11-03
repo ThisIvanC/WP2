@@ -1,15 +1,16 @@
 <?php
 defined('BASEPATH') or exit ('no direct script access allowed');
 
-class web extends CI_Controller{
-    function _construct(){
-        parent:: _construct();
-        $this->load->helper('url');
+class Web extends CI_Controller{
+
+    function __construct(){
+        parent::__construct();
     }
+
     public function index(){
-        $data['judul']="Halaman About";
-        $this->load->view('V_header', $data);
-        $this->load->view('V_about', $data);
-        $this->load->view('V_footer', $data);
+        $data['judul'] = "Halaman Depan";
+        $this->load->view('v_header',$data);
+        $this->load->view('v_index',$data);
+        $this->load->view('v_footer',$data);
     }
 }
